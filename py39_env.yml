@@ -1,0 +1,55 @@
+name: py39
+channels:
+  - defaults
+dependencies:
+  - _libgcc_mutex=0.1=main
+  - _openmp_mutex=5.1=1_gnu
+  - ca-certificates=2022.07.19=h06a4308_0
+  - certifi=2022.9.24=py39h06a4308_0
+  - ld_impl_linux-64=2.38=h1181459_1
+  - libffi=3.3=he6710b0_2
+  - libgcc-ng=11.2.0=h1234567_1
+  - libgomp=11.2.0=h1234567_1
+  - libstdcxx-ng=11.2.0=h1234567_1
+  - ncurses=6.3=h5eee18b_3
+  - openssl=1.1.1q=h7f8727e_0
+  - pip=22.2.2=py39h06a4308_0
+  - python=3.9.13=haa1d7c7_1
+  - readline=8.1.2=h7f8727e_1
+  - setuptools=63.4.1=py39h06a4308_0
+  - sqlite=3.39.3=h5082296_0
+  - tk=8.6.12=h1ccaba5_0
+  - tzdata=2022c=h04d1e81_0
+  - wheel=0.37.1=pyhd3eb1b0_0
+  - xz=5.2.6=h5eee18b_0
+  - zlib=1.2.12=h5eee18b_3
+  - pip:
+    - antlr4-python3-runtime==4.9.3
+    - cffi==1.15.1
+    - colorama==0.4.6
+    - cython==0.29.32
+    - dataclasses==0.6
+    - editdistance==0.6.1
+    - fairseq==0.9.0
+    - hydra-core==1.2.0
+    - lxml==4.9.1
+    - numpy==1.23.4
+    - nvidia-cublas-cu11==11.10.3.66
+    - nvidia-cuda-nvrtc-cu11==11.7.99
+    - nvidia-cuda-runtime-cu11==11.7.99
+    - nvidia-cudnn-cu11==8.5.0.96
+    - omegaconf==2.2.3
+    - packaging==21.3
+    - portalocker==2.6.0
+    - pycparser==2.21
+    - pyparsing==3.0.9
+    - pyyaml==6.0
+    - regex==2022.10.31
+    - sacrebleu==2.3.1
+    - sentencepiece==0.1.97
+    - sling==2.0.0
+    - tabulate==0.9.0
+    - torch==1.13.0
+    - tqdm==4.64.1
+    - typing-extensions==4.4.0
+prefix: /data/hulab/junjieh/miniconda3/envs/py39
