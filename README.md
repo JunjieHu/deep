@@ -1,4 +1,4 @@
-# DEEP: DEnoising Entity Pre-training for Neural Machine Translation
+# DEEP: DEnoising Entity Pre-training for Neural Machine Translation (ACL 2022)
 
 
 ## Installation
@@ -19,12 +19,14 @@ pip install --editable ./
   - [Ted talk En-Uk translation for finetuning](https://drive.google.com/drive/folders/1nrP1-KCcrvGndloCwZkFXe7hD-4n8KQq?usp=share_link)
 
 ## Perform SLING's entity linking
-After installing SLING, run the following to perform entity linking on Wikipedia article.
+After installing SLING, you should have your SLING installed under `$REPO/tools/sling` (`REPO` denotes the path to this repo). Then run the following to perform entity linking on Wikipedia article.
 ```
-lang=$1
+cd tools/sling
+lang=uk    # uk: Ukraine
 version=20221101  # the version we used
 ./run.sh --download_wikidata --download_wikipedia --wikipedia $version --language $lang
 ```
+This will generate annotated Ukraine Wikipedia articles under `$REPO/tools/sling/local/data/e/wiki/uk/documents-0000{0-9}-of-00010.rec`, which will be used to create pre-training data.
 
 ## Prepare DEEP's Pre-training Data
 After the installation of above tools, run the following to create DEEP's pre-training data. 
@@ -51,4 +53,24 @@ bash train-scripts/finetune-deep-ted.sh [GPU ID]
 ## Evaluate on Downstream MT Task
 ```
 bash train-scripts/test_ted_enuk_deep.sh [GPU ID]
+```
+
+## Citation
+If you find our work interesting and use the code in this repository, please cite our [ACL2022 paper](https://aclanthology.org/2022.acl-long.123).
+```
+@inproceedings{hu-etal-2022-deep,
+    title = "{DEEP}: {DE}noising Entity Pre-training for Neural Machine Translation",
+    author = "Hu, Junjie  and
+      Hayashi, Hiroaki  and
+      Cho, Kyunghyun  and
+      Neubig, Graham",
+    booktitle = "Proceedings of the 60th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)",
+    month = may,
+    year = "2022",
+    address = "Dublin, Ireland",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2022.acl-long.123",
+    doi = "10.18653/v1/2022.acl-long.123",
+    pages = "1753--1766",
+}
 ```
