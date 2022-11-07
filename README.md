@@ -2,8 +2,9 @@
 
 
 ## Installation
+Here are a list of important tools for installation. We also provide a conda env file [py39_env.txt](./py39_env.yml).
 - SLING (Please see [SLING.md](./SLING.md) for more details.)
-- Python: sentencepiece, tqdm
+- Python: sentencepiece, tqdm. 
 - [Our modified fairseq for TPU/GPU](./fairseq/)
 ```
 cd fairseq
@@ -41,14 +42,13 @@ bash train-scripts/pretrain-deep-mbart.sh
 ```
 
 ## Finetune on Downstream MT Task
-Here we give an example of fune-tuning our pre-trained models on the Ted En-Uk dataset.
+Here we give an example of fune-tuning our pre-trained models on the Ted En-Uk dataset. Replace [GPU ID] by an integer (e.g., 0, 1, ...) indicating which GPU to use.
 ```
-# Replace [GPU ID] by an integer (e.g., 0, 1, ...) indicating which GPU to use
 bash train-scripts/finetune-deep-ted.sh [GPU ID]  
 ```
 
 
 ## Evaluate on Downstream MT Task
 ```
-
+bash train-scripts/test_ted_enuk_deep.sh [GPU ID]
 ```
